@@ -76,6 +76,14 @@ public class BancoDeDados {
         }
     } 
     
+    public void tirarTurma(String codigo){
+        if(turmas.existe(codigo)){
+            turmas.remover(codigo);
+        }else{
+            System.out.println("Turma não existe");
+        }
+    }
+    
     public void ListarTurmas() {
         System.out.println(turmas);
     }

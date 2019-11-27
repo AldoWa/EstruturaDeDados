@@ -37,23 +37,28 @@ public class main {
                     System.out.println("Digite o RG do aluno para cadastrar na turma: ");
                     String rgCadastro = scanner.nextLine();
                     bd.matricularTurma(codigoCadastro, rgCadastro);
+                    break;
                 case 4:
                     System.out.println("Digite o codigo da turma que deseja desmatricular o aluno: ");
                     String codigodesCadastro = scanner.nextLine();
                     System.out.println("Digite o RG do aluno para desmatricular na turma: ");
                     String rgdesCadastro = scanner.nextLine();
-                    bd.desMatricularDaTurma(codigodesCadastro, rgdesCadastro);
+                    bd.desMatricularTurma(codigodesCadastro, rgdesCadastro);
+                    break;
                 case 5:
                     System.out.println("Digite o codigo da turma que deseja excluir: ");
                     String codigoExclusao = scanner.nextLine();
                     bd.tirarTurma(codigoExclusao);
+                    break;
                 case 6:
                     System.out.println("Digite o codigo da turma para mostrar os alunos: ");
                     String codigoTurmaAlunos = scanner.nextLine();
                     bd.listarAlunosDeUmaTurma(codigoTurmaAlunos);
+                    break;
                 case 7:
                     System.out.println("Turmas cadastradas");
                     bd.ListarTurmas();
+                    break;
                 case -1:
                     contador = -1;
                     break;
@@ -87,7 +92,7 @@ public class main {
          bd.matricularTurma("300", "031");
           bd.matricularTurma("123", "032");
         //CancelarMatricula
-        bd.desMatricularDaTurma("123", "030");
+        bd.desMatricularTurma("123", "030");
         //CancelarTurma
         bd.tirarTurma("123");
         //Listar alunos de uma turma
